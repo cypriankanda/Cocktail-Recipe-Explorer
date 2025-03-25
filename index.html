@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cocktail Recipe Explorer 🍸</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Cocktail Recipe Explorer 🍹</h1>
+    <p>Discover, Explore, and Save Your Favorite Cocktails 🍸</p>
+  </header>
+
+  <main>
+    <div class="search-filter">
+      <input type="text" id="search-bar" placeholder="Search for a cocktail...">
+      <select id="alcohol-filter">
+        <option value="">All Alcohol Types</option>
+        <option value="Vodka">Vodka</option>
+        <option value="Rum">Rum</option>
+        <option value="Tequila">Tequila</option>
+        <option value="Gin">Gin</option>
+        <option value="Whiskey">Whiskey</option>
+      </select>
+      <select id="alcoholic-filter">
+        <option value="">All Types</option>
+        <option value="Alcoholic">Alcoholic</option>
+        <option value="Non_Alcoholic">Non-Alcoholic</option>
+      </select>
+      <button id="view-toggle" class="view-toggle-btn">
+        <i class="fas fa-th-large"></i>
+      </button>
+    </div>
+
+    <div id="cocktail-grid" class="cocktail-grid"></div>
+  </main>
+
+  <footer>
+    <p>Made with ❤️ by Cyprian Kanda - Moringa Project</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
