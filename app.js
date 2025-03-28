@@ -11,7 +11,11 @@ const viewToggleBtn = document.getElementById('view-toggle');
 const cocktailGrid = document.getElementById('cocktail-grid');
 const favoriteList = document.getElementById("favorite-list");
 
-
+// Event Listeners
+searchBar.addEventListener('input', debounce(handleSearch, 300));
+alcoholFilter.addEventListener('change', handleFilters);
+alcoholicFilter.addEventListener('change', handleFilters);
+viewToggleBtn.addEventListener('click', toggleView);
 
 // Fetch cocktails from API
 async function fetchCocktails() {
@@ -23,7 +27,7 @@ async function fetchCocktails() {
     }
 }
 
-// Display cocktails in the grid
+// Display cocktails in grid format 
 function displayCocktails(cocktailsToDisplay) {
     if (!cocktailsToDisplay || cocktailsToDisplay.length === 0) {
         cocktailGrid.innerHTML = '<p>No cocktails found.</p>';
