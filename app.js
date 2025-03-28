@@ -197,5 +197,6 @@ function debounce(func, wait) {
     };
 }
 
-//initialize the app fn below
-
+// Initialize the app
+fetchCocktails();
+loadFavorites();
