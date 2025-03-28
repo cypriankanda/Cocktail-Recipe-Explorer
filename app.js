@@ -168,7 +168,21 @@ function toggleFavorite(cocktail, button) {
 }
 
 // Load favorites
-
+function loadFavorites() {
+    if (!favoriteList) return;
+    
+    favoriteList.innerHTML = '';
+    if (favorites.length > 0) {
+        favorites.forEach(fav => {
+            const favoriteItem = document.createElement("div");
+            favoriteItem.className = "favorite-item";
+            favoriteItem.textContent = fav.strDrink;
+            favoriteList.appendChild(favoriteItem);
+        });
+    } else {
+        favoriteList.innerHTML = "<p>No favorites yet. Add some!</p>";
+    }
+}
 
 // Debounce function for search input
 function debounce(func, wait) {
