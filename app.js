@@ -180,7 +180,7 @@ function loadFavorites() {
             favoriteList.appendChild(favoriteItem);
         });
     } else {
-        favoriteList.innerHTML = "<p>No favorites yet. Add some!</p>";
+        favoriteList.innerHTML = "<p>No favorites yet. Add some now!</p>";
     }
 }
 
